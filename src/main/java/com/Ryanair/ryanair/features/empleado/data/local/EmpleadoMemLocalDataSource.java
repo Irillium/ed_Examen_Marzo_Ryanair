@@ -7,7 +7,7 @@ import java.util.*;
 public class EmpleadoMemLocalDataSource {
 
     private static EmpleadoMemLocalDataSource empleadoMemLocalDataSource=null;
-    private static EmpleadoMemLocalDataSource newInstance(){
+    public static EmpleadoMemLocalDataSource newInstance(){
         if(empleadoMemLocalDataSource ==null){
             empleadoMemLocalDataSource= new EmpleadoMemLocalDataSource();
         }

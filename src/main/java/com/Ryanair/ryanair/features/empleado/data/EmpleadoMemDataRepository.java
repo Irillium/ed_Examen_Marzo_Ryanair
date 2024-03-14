@@ -4,8 +4,13 @@ import com.Ryanair.ryanair.features.empleado.data.local.EmpleadoMemLocalDataSour
 import com.Ryanair.ryanair.features.empleado.domain.Empleado;
 import com.Ryanair.ryanair.features.empleado.domain.EmpleadoRepository;
 
-public class EmpleadoDataRepository implements EmpleadoRepository {
+public class EmpleadoMemDataRepository implements EmpleadoRepository {
     private EmpleadoMemLocalDataSource empleadoMemLocalDataSource;
+
+    public EmpleadoMemDataRepository(EmpleadoMemLocalDataSource empleadoMemLocalDataSource) {
+        this.empleadoMemLocalDataSource = empleadoMemLocalDataSource;
+    }
+
     @Override
     public void save(Empleado empleado) {
         empleadoMemLocalDataSource.save(empleado);

@@ -5,7 +5,7 @@ import com.Ryanair.ryanair.features.avion.domain.Avion;
 import com.Ryanair.ryanair.features.avion.domain.AvionRepository;
 
 public class AvionDataRepository implements AvionRepository {
-    private AvionFileLocalDataSource avionFileLocalDataSource;
+    private AvionFileLocalDataSource avionFileLocalDataSource = new AvionFileLocalDataSource();
     @Override
     public void save(Avion avion) {
         avionFileLocalDataSource.save(avion);

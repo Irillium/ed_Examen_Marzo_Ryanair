@@ -5,7 +5,7 @@ import com.Ryanair.ryanair.features.empleado.domain.Empleado;
 import com.Ryanair.ryanair.features.empleado.domain.EmpleadoRepository;
 
 public class EmpleadoFileDataRepository implements EmpleadoRepository {
-    private EmpleadoFileLocalDataSource empleadoFileLocalDataSource;
+    private EmpleadoFileLocalDataSource empleadoFileLocalDataSource= new EmpleadoFileLocalDataSource();
     @Override
     public void save(Empleado empleado) {
         empleadoFileLocalDataSource.save(empleado);

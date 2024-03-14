@@ -8,7 +8,8 @@ public class UsedAvionUseCase {
     }
 
     public boolean execute(String id){
-        Avion avion = avionRepository.obtain(id);
-        return avion.isAsignado();
+
+        return avionRepository.isUsed(id);
     }
+
 }

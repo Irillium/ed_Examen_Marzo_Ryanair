@@ -15,4 +15,10 @@ public class AvionDataRepository implements AvionRepository {
     public Avion obtain(String id) {
         return avionFileLocalDataSource.findById(id);
     }
+
+    @Override
+    public boolean isUsed(String id) {
+        Avion avion = obtain(id);
+        return avion.isAsignado();
+    }
 }

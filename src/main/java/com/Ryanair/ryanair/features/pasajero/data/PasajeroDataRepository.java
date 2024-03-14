@@ -6,6 +6,7 @@ import com.Ryanair.ryanair.features.pasajero.domain.PasajeroRepository;
 
 public class PasajeroDataRepository implements PasajeroRepository {
     PasajeroFileLocalDataSource pasajeroFileLocalDataSource;
+
     @Override
     public void save(Pasajero pasajero) {
         pasajeroFileLocalDataSource.save(pasajero);

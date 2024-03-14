@@ -10,4 +10,9 @@ public class AvionDataRepository implements AvionRepository {
     public void save(Avion avion) {
         avionFileLocalDataSource.save(avion);
     }
+
+    @Override
+    public Avion obtain(String id) {
+        return avionFileLocalDataSource.findById(id);
+    }
 }

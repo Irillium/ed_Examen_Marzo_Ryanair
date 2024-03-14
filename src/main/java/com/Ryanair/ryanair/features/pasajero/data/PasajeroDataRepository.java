@@ -10,4 +10,9 @@ public class PasajeroDataRepository implements PasajeroRepository {
     public void save(Pasajero pasajero) {
         pasajeroFileLocalDataSource.save(pasajero);
     }
+
+    @Override
+    public Pasajero obtain(String id) {
+        return pasajeroFileLocalDataSource.findById(id);
+    }
 }

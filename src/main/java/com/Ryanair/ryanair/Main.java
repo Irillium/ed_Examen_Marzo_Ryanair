@@ -9,6 +9,8 @@ import com.Ryanair.ryanair.features.pasajero.presentation.MainPasajero;
 import com.Ryanair.ryanair.features.vuelo.domain.Vuelo;
 import com.Ryanair.ryanair.features.vuelo.presentation.MainVuelo;
 
+import java.util.ArrayList;
+
 // Press Shift twice to open the Search Everywhere dialog and type `show whitespaces`,
 // then press Enter. You can now see whitespace characters in your code.
 public class Main {
@@ -28,7 +30,18 @@ public class Main {
         MainAvion.save( new Avion("100003","Rayo","Boing710","100",false));
 
         //Vuelos
-        MainVuelo.save(new Vuelo("1", ));
+        Avion avion= MainAvion.obtein("100001");
+
+        ArrayList<Empleado> empleadosVuelo=new ArrayList<>();
+        empleadosVuelo.add(MainEmpleado.obtain("700001"));
+        empleadosVuelo.add(MainEmpleado.obtain("700003"));
+
+        ArrayList<Pasajero> pasajerosVuelo=new ArrayList<>();
+        pasajerosVuelo.add(MainPasajero.obtain("800001"));
+        pasajerosVuelo.add(MainPasajero.obtain("800002"));
+
+        MainVuelo.save(new Vuelo("1",avion, empleadosVuelo,pasajerosVuelo,"10/02/2024","10:30h", "90e","Madrid","Barcelona" ));
+        MainVuelo.obtain("1");
 
     }
 }

@@ -11,4 +11,9 @@ public class VueloDataRepository implements VueloRepository {
     public void save(Vuelo vuelo) {
         vueloFileLocalDataSource.save(vuelo);
     }
+
+    @Override
+    public Vuelo obtain(String id) {
+        return vueloFileLocalDataSource.findById(id);
+    }
 }

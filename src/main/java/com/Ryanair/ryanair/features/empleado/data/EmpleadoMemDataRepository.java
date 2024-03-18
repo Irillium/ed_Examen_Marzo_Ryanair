@@ -5,7 +5,7 @@ import com.Ryanair.ryanair.features.empleado.domain.Empleado;
 import com.Ryanair.ryanair.features.empleado.domain.EmpleadoRepository;
 
 public class EmpleadoMemDataRepository implements EmpleadoRepository {
-    private EmpleadoMemLocalDataSource empleadoMemLocalDataSource;
+    private EmpleadoMemLocalDataSource empleadoMemLocalDataSource=new EmpleadoMemLocalDataSource();
 
     public EmpleadoMemDataRepository(EmpleadoMemLocalDataSource empleadoMemLocalDataSource) {
         this.empleadoMemLocalDataSource = empleadoMemLocalDataSource;
